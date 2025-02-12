@@ -1,0 +1,61 @@
+:root {
+  /* Color Palette */
+  --color-primary: #3498db;
+  --color-primary-dark: #2980b9;
+  --color-primary-light: #5dade2;
+  --color-secondary: #e74c3c;
+  --color-accent: #f39c12;
+  --color-background: #ecf0f1;
+  --color-background-alt: #ffffff;
+  --color-text: #2c3e50;
+  --color-text-light: #ffffff;
+  --color-text-light-muted: #bdc3c7;
+  --color-border: #bdc3c7;
+
+  /* Typography */
+  --font-family-base: "Inter", sans-serif;
+  --font-size-base: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 48px;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+
+  /* Borders */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Dark mode theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #3498db;
+    --color-primary-dark: #2980b9;
+    --color-primary-light: #5dade2;
+    --color-secondary: #e74c3c;
+    --color-accent: #f39c12;
+    --color-background: #2c3e50;
+    --color-background-alt: #34495e;
+    --color-text: #ecf0f1;
+    --color-text-light: #ffffff;
+    --color-text-light-muted: #bdc3c7;
+    --color-border: #7f8c8d;
+  }
+}
