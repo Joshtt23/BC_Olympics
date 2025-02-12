@@ -18,13 +18,11 @@ export default function Contact() {
   const [formState, setFormState] = useState({
     name: "",
     email: "",
-    subject: "",
+    subject: "sponsorship",
     message: "",
   });
+
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -34,36 +32,38 @@ export default function Contact() {
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(formState),
       });
 
-      const data = await response.json(); // Get JSON response
+      const data = await response.json();
 
-      if (response.ok) {
-        setSubmitStatus("success");
-        setFormState({ name: "", email: "", subject: "", message: "" });
-
+      if (data.success) {
         toast({
           title: "Message Sent",
-          description: data.message, // Use message from API
+          description:
+            "Thank you for your message. We'll get back to you soon!",
           variant: "default",
         });
+        // Reset form
+        setFormState({ name: "", email: "", subject: "", message: "" });
       } else {
-        throw new Error(data.message || "Failed to send message");
+        throw new Error(data.message || "Something went wrong");
       }
-    } catch (error: any) {
-      console.error("Submit error:", error);
-      setSubmitStatus("error");
-
+    } catch (error) {
       toast({
         title: "Error",
-        description: error.message || "Something went wrong. Try again later.",
+        description:
+          error instanceof Error
+            ? error.message
+            : "Failed to send message. Please try again.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setIsSubmitting(false);
   };
 
   const handleInputChange = (

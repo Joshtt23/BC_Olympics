@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
     const emailResponse = await resend.emails.send({
       from: `BC Cycling <bc.cycling@resend.dev>`,
-      to: "joshua.traver1998@gmail.com",
+      to: "bcovipersonaltraining@gmail.com",
       subject: `New Contact Form Submission: ${subject}`,
       html: `<p><strong>Name:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>
