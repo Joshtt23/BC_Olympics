@@ -77,7 +77,7 @@ export default function Training() {
                   src={routine.image}
                   alt={routine.title}
                   fill
-                  className="object-cover"
+                  className={`object-cover ${routine.title === "Daily Stretch Routine" ? "object-[center_10%]" : ""}`}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
