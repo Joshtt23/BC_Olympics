@@ -28,7 +28,7 @@ const timelineEvents = [
     event: "Played football and basketball",
     details:
       "Joined cross-town football team when home school's program was discontinued.",
-    image: "/media/placeholder.svg",
+    image: "/media/HSSolo.jpg",
     achievements: [
       "Adapted to new team environment",
       "Developed teamwork and perseverance",
@@ -39,7 +39,7 @@ const timelineEvents = [
     event: "Attended Hudson Valley Community College",
     details:
       "Earned A.S. in Exercise Science while playing football for two seasons.",
-    image: "/media/placeholder.svg",
+    image: "/media/HVGame7.jpg",
     achievements: [
       "A.S. in Exercise Science",
       "Two seasons of college football",
