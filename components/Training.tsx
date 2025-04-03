@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Bike,
   PlayIcon as Run,
@@ -14,30 +15,35 @@ const trainingRoutine = [
     description:
       "1 hour and 40 minute total body stretch, from neck to legs, 3 times a day",
     icon: Stretch,
+    image: "/media/Jumping.jpg",
   },
   {
     title: "Daily Cycling",
     description:
       "20+ miles outside on upstate NY mountain roads or 1 hour indoor UCI workout",
     icon: Bike,
+    image: "/media/SoloAction4.jpg",
   },
   {
     title: "Daily Running",
     description:
       "6.2 miles with dynamic stretching and 10x40 yard all-out sprints",
     icon: Run,
+    image: "/media/Placeholder.jpg",
   },
   {
     title: "Strength Training",
     description:
       "Heavy lifting (Olympic lifts, isometric exercises, bodyweight exercises) on Monday, Tuesday, Thursday mornings",
     icon: Dumbbell,
+    image: "/media/Placeholder.jpg",
   },
   {
     title: "HIIT Workouts",
     description:
       "High-intensity interval training with kettlebells, dumbbells, and cardio on Wednesday and Friday",
     icon: Zap,
+    image: "/media/Placeholder.jpg",
   },
 ];
 
@@ -61,18 +67,29 @@ export default function Training() {
           {trainingRoutine.map((routine, index) => (
             <motion.div
               key={routine.title}
-              className="bg-background p-6 rounded-lg shadow-md"
+              className="bg-background rounded-lg shadow-md overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="flex items-center mb-4">
-                <routine.icon className="w-8 h-8 text-secondary mr-4" />
-                <h3 className="text-2xl font-bold text-primary">
-                  {routine.title}
-                </h3>
+              <div className="relative h-48 w-full">
+                <Image
+                  src={routine.image}
+                  alt={routine.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
-              <p className="text-text">{routine.description}</p>
+              <div className="p-6">
+                <div className="flex items-center mb-4">
+                  <routine.icon className="w-8 h-8 text-secondary mr-4" />
+                  <h3 className="text-2xl font-bold text-primary">
+                    {routine.title}
+                  </h3>
+                </div>
+                <p className="text-text">{routine.description}</p>
+              </div>
             </motion.div>
           ))}
         </div>

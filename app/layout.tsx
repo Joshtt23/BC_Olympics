@@ -33,7 +33,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${barlowCondensed.variable} ${openSans.variable}`}>
 
-      <body className={openSans.className}>
+      <body
+        className={`${openSans.className} antialiased`}
+        suppressHydrationWarning
+      >
         <Header />
         <main>{children}</main>
         <Footer />

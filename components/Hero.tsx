@@ -7,12 +7,13 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
       {/* Background Image */}
       <Image
-        src="/hero-bg.jpg"
-        alt="Cycling background"
-        layout="fill"
-        objectFit="cover"
+        src="/media/Photo Feb 04 2025, 8 29 38 PM.jpg"
+        alt="Ben Covi cycling training"
+        fill
+        sizes="100vw"
         quality={100}
-        className="opacity-30"
+        className="opacity-30 object-cover"
+        priority
       />
 
       {/* Content Container */}

@@ -9,7 +9,7 @@ const timelineEvents = [
     year: "Birth",
     event: "Adopted in Poughkeepsie, NY",
     details: "Began life's journey with adoptive parents in Woodstock, NY.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/media/Dad_Son.jpeg",
     achievements: ["Started a new chapter with a loving family"],
   },
   {
@@ -17,7 +17,7 @@ const timelineEvents = [
     event: "Discovered passion for cycling",
     details:
       "Spent hours cycling at grandparents' house and on home stationary bike.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/media/ChildPose.jpeg",
     achievements: [
       "Developed early love for cycling",
       "Built endurance through consistent practice",
@@ -28,7 +28,7 @@ const timelineEvents = [
     event: "Played football and basketball",
     details:
       "Joined cross-town football team when home school's program was discontinued.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/media/placeholder.svg",
     achievements: [
       "Adapted to new team environment",
       "Developed teamwork and perseverance",
@@ -39,7 +39,7 @@ const timelineEvents = [
     event: "Attended Hudson Valley Community College",
     details:
       "Earned A.S. in Exercise Science while playing football for two seasons.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/media/placeholder.svg",
     achievements: [
       "A.S. in Exercise Science",
       "Two seasons of college football",
@@ -50,7 +50,7 @@ const timelineEvents = [
     event: "Obtained professional certifications",
     details:
       "Became certified personal trainer and assistant coach for Rock Steady Boxing.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/media/placeholder.svg",
     achievements: [
       "ACSM Personal Trainer Certification",
       "Rock Steady Boxing Assistant Coach Certificate",
@@ -60,7 +60,7 @@ const timelineEvents = [
     year: "2018-Present",
     event: "Intense Olympic training begins",
     details: "Committed to rigorous daily workouts and strict diet regimen.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/media/WaterDrink.jpg",
     achievements: [
       "1,880 consecutive days of workouts",
       "4,871.37 hours of training",
@@ -71,7 +71,7 @@ const timelineEvents = [
     year: "2028",
     event: "Olympic Goal",
     details: "Aiming to qualify for the 2028 Olympic Games.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/media/SittingPoseWBike.jpg",
     achievements: ["Working towards Olympic qualification"],
   },
 ];

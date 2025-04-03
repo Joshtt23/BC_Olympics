@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, Play } from "lucide-react";
@@ -20,6 +20,7 @@ interface LightboxGalleryProps {
 export default function LightboxGallery({ media }: LightboxGalleryProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
 
   const openLightbox = (index: number) => {
     setCurrentIndex(index);
@@ -40,21 +41,46 @@ export default function LightboxGallery({ media }: LightboxGalleryProps) {
     );
   };
 
+  // Preload next and previous images
+  useEffect(() => {
+    if (lightboxOpen) {
+      const nextIndex = (currentIndex + 1) % media.length;
+      const prevIndex = (currentIndex - 1 + media.length) % media.length;
+      
+      const preloadImage = (src: string) => {
+        if (!loadedImages.has(src)) {
+          const img = new window.Image();
+          img.src = src;
+          setLoadedImages(prev => new Set(prev).add(src));
+        }
+      };
+
+      if (media[nextIndex].type === "image") {
+        preloadImage(media[nextIndex].src);
+      }
+      if (media[prevIndex].type === "image") {
+        preloadImage(media[prevIndex].src);
+      }
+    }
+  }, [currentIndex, lightboxOpen, media, loadedImages]);
+
   return (
     <div>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {media.map((item, index) => (
           <div
             key={index}
-            className="aspect-square relative overflow-hidden rounded-lg cursor-pointer"
+            className="aspect-square relative overflow-hidden rounded-lg cursor-pointer group"
             onClick={() => openLightbox(index)}
           >
             <Image
-              src={item.thumbnail || item.src || "/placeholder.svg"}
+              src={item.thumbnail || item.src}
               alt={item.alt || ""}
-              layout="fill"
-              objectFit="cover"
-              className="transition-transform duration-300 hover:scale-110"
+              fill
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+              className="object-cover transition-transform duration-300 group-hover:scale-110"
+              loading="lazy"
+              quality={75}
             />
             {item.type === "video" && (
               <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
@@ -94,12 +120,13 @@ export default function LightboxGallery({ media }: LightboxGalleryProps) {
             <div className="w-full max-w-4xl max-h-[80vh] relative">
               {media[currentIndex].type === "image" ? (
                 <Image
-                  src={media[currentIndex].src || "/placeholder.svg"}
+                  src={media[currentIndex].src}
                   alt={media[currentIndex].alt || ""}
-                  layout="responsive"
-                  width={16}
-                  height={9}
-                  objectFit="contain"
+                  width={1920}
+                  height={1080}
+                  className="w-full h-auto"
+                  priority
+                  quality={90}
                 />
               ) : (
                 <Video
