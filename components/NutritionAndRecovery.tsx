@@ -5,7 +5,7 @@ import { Utensils, Battery, Moon, Apple, X } from "lucide-react";
 const nutritionData = [
   {
     title: "Intermittent Fasting",
-    description: "Practiced 365 days a year since December 17th, 2019",
+    description: "Practiced 365 days a year since December 17th, 2019 to regulate blood sugar levels and maintain consistent energy",
     icon: Battery,
   },
   {
@@ -15,7 +15,7 @@ const nutritionData = [
     icon: X,
   },
   {
-    title: "Break Fast Meal",
+    title: "Lunch",
     description:
       "2,000 calorie bowl of granola with coconut milk, banana, apple, assorted fruit, carrots, and lettuce",
     icon: Apple,
@@ -27,10 +27,31 @@ const nutritionData = [
     icon: Utensils,
   },
   {
+    title: "Hydration",
+    description:
+      "Exclusive water consumption since December 17th, 2019 - no fruit drinks, protein powders, or smoothies",
+    icon: Moon,
+  },
+  {
     title: "Sleep Optimization",
     description:
       "Prioritizing 8-9 hours of quality sleep per night to support muscle recovery and mental sharpness",
     icon: Moon,
+  },
+];
+
+const recoveryTreatments = [
+  {
+    title: "Professional Therapies",
+    description: "Regular acupuncture, chiropractic care, and therapeutic massage to maintain optimal physical condition and prevent injuries",
+  },
+  {
+    title: "Temperature Therapy",
+    description: "Daily cold showers and 15-20 minute hot tub sessions before bed, combined with infrared sauna and cryotherapy treatments",
+  },
+  {
+    title: "Traditional Techniques",
+    description: "Gua Sha and cupping treatments to release trapped blood and toxins from scar tissue, promoting healthy nutrient flow to muscle tissue",
   },
 ];
 
@@ -82,24 +103,56 @@ export default function NutritionAndRecovery() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <h3 className="text-2xl font-bold text-primary mb-4">
+            Recovery Protocol
+          </h3>
+          <p className="text-text mb-4">
+            A comprehensive recovery strategy is essential for maintaining peak performance and preventing injuries. Ben's recovery protocol combines modern therapies with traditional techniques to ensure optimal muscle function and tissue health.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mt-6">
+            {recoveryTreatments.map((treatment, index) => (
+              <motion.div
+                key={treatment.title}
+                className="bg-background-alt p-4 rounded-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
+              >
+                <h4 className="text-xl font-bold text-secondary mb-2">
+                  {treatment.title}
+                </h4>
+                <p className="text-text">{treatment.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+        <motion.div
+          className="mt-12 bg-background p-6 rounded-lg shadow-md"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <h3 className="text-2xl font-bold text-primary mb-4">
             Dietary Philosophy
           </h3>
           <p className="text-text mb-4">
             Ben's diet is carefully crafted to maximize his athletic performance
             and overall health. By eliminating processed foods, sugars, and
             potential allergens, he ensures his body receives only clean,
-            nutrient-dense fuel.
+            nutrient-dense fuel. The high-fat diet (9 kcal per gram) compared to
+            protein/carbs (4 kcal per gram) allows for efficient energy intake
+            through just two meals per day while maintaining satiety and sustained
+            energy levels.
           </p>
           <h4 className="text-xl font-bold text-secondary mb-2">
             Key Principles:
           </h4>
           <ul className="list-disc list-inside space-y-2 text-text">
-            <li>Consistent intermittent fasting regimen</li>
+            <li>Consistent intermittent fasting regimen for blood sugar regulation</li>
             <li>Focus on whole, unprocessed foods</li>
             <li>Elimination of common inflammatory foods</li>
-            <li>High-carb, nutrient-dense breakfast to break fast</li>
+            <li>High-fat diet for efficient energy intake and satiety</li>
             <li>Simple, balanced dinner for easy digestion</li>
-            <li>Hydration throughout the day (water intake not specified)</li>
+            <li>Exclusive water consumption with no alcohol</li>
           </ul>
         </motion.div>
       </div>

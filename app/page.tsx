@@ -10,6 +10,7 @@ import Testimonials from "../components/Testimonials";
 import Sponsors from "../components/Sponsors";
 import NutritionAndRecovery from "../components/NutritionAndRecovery";
 import DynamicSections from "../components/DynamicSections";
+import Investment from "../components/Investment";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       {/* <Achievements /> */}
       <Training />
       <NutritionAndRecovery />
+      <Investment />
       <PowerOutput />
       <DynamicSections />
       {/* <Testimonials /> */}

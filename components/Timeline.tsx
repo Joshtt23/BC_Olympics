@@ -14,13 +14,15 @@ const timelineEvents = [
   },
   {
     year: "Childhood",
-    event: "Discovered passion for cycling",
+    event: "Athletic Foundation & Family Influence",
     details:
-      "Spent hours cycling at grandparents' house and on home stationary bike.",
+      "Inspired by father's remarkable athletic achievements, including a 28-1 high school wrestling record and recruitment to Princeton University. These early lessons in dedication and excellence laid the foundation for my own athletic journey.",
     image: "/media/ChildPose.jpeg",
     achievements: [
       "Developed early love for cycling",
       "Built endurance through consistent practice",
+      "Learned valuable lessons in dedication and discipline from father's athletic success",
+      "Inherited a strong work ethic and commitment to excellence",
     ],
   },
   {

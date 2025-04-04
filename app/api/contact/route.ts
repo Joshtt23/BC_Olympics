@@ -8,21 +8,41 @@ export async function POST(req: Request) {
   try {
     const { name, email, subject, message } = await req.json();
 
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: "Email service not configured. Please contact the administrator.",
+        },
+        { status: 500 }
+      );
+    }
+
     const emailResponse = await resend.emails.send({
-      from: `BC Cycling <bc.cycling@resend.dev>`,
-      to: "bcovipersonaltraining@gmail.com",
+      from: `BC Olympic Cycling <bc.cycling@resend.dev>`,
+      to: "bcoviolympiccycling@gmail.com",
       subject: `New Contact Form Submission: ${subject}`,
-      html: `<p><strong>Name:</strong> ${name}</p>
-             <p><strong>Email:</strong> ${email}</p>
-             <p><strong>Message:</strong> ${message}</p>`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #333;">New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          <p><strong>Message:</strong></p>
+          <div style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; margin-top: 10px;">
+            ${message}
+          </div>
+        </div>
+      `,
     });
 
     // Check for API errors
     if (emailResponse.error) {
+      console.error("Resend API Error:", emailResponse.error);
       return NextResponse.json(
         {
           success: false,
-          message: "Email sending failed.",
+          message: "Email sending failed. Please try again later.",
           error: emailResponse.error,
         },
         { status: 500 }
@@ -39,7 +59,7 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         success: false,
-        message: "Internal server error",
+        message: "Internal server error. Please try again later.",
         error: error.message,
       },
       { status: 500 }

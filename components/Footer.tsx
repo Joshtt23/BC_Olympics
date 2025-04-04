@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Twitter, Instagram, Facebook } from "lucide-react";
+import { Twitter, Instagram, Facebook, Mail } from "lucide-react";
 
 const footerLinks = [
   { name: "Bio", href: "#bio" },
@@ -59,17 +59,18 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-2">Connect</h4>
             <div className="flex space-x-4">
               {[
-                { name: "Twitter", icon: Twitter, href: "#" },
-                { name: "Instagram", icon: Instagram, href: "#" },
-                { name: "Facebook", icon: Facebook, href: "#" },
+                { name: "Email", icon: Mail, href: "mailto:bcoviolympiccycling@gmail.com" },
+                { name: "Instagram", icon: Instagram, href: "https://instagram.com/bcovi1998" },
               ].map((social) => (
                 <motion.a
                   key={social.name}
                   href={social.href}
+                  target={social.name === "Instagram" ? "_blank" : undefined}
+                  rel={social.name === "Instagram" ? "noopener noreferrer" : undefined}
                   className="text-text hover:text-secondary transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  aria-label={`Visit our ${social.name} page`}
+                  aria-label={`Visit ${social.name}`}
                 >
                   <social.icon size={24} />
                 </motion.a>

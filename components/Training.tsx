@@ -9,11 +9,40 @@ import {
   Zap,
 } from "lucide-react";
 
-const trainingRoutine = [
+interface StrengthExercise {
+  name: string;
+  sets: string;
+  reps: string;
+  weight?: string;
+}
+
+interface HIITExercise {
+  name: string;
+  duration?: string;
+  incline?: string;
+  reps?: string;
+  weight?: string;
+}
+
+interface ExampleWorkout {
+  title: string;
+  rounds?: string;
+  exercises: (StrengthExercise | HIITExercise)[];
+}
+
+interface TrainingRoutine {
+  title: string;
+  description: string;
+  icon: any;
+  image: string;
+  exampleWorkout?: ExampleWorkout;
+}
+
+const trainingRoutine: TrainingRoutine[] = [
   {
     title: "Daily Stretch Routine",
     description:
-      "1 hour and 40 minute total body stretch, from neck to legs, 3 times a day",
+      "2-hour comprehensive stretching routine performed 3 times daily, focusing on neck, shoulders, pelvic stabilization, hips, and glutes while maintaining full-body flexibility",
     icon: Stretch,
     image: "/media/Jumping.jpg",
   },
@@ -25,18 +54,25 @@ const trainingRoutine = [
     image: "/media/SoloAction4.jpg",
   },
   {
-    title: "Daily Running",
-    description:
-      "6.2 miles with dynamic stretching and 10x40 yard all-out sprints",
-    icon: Run,
-    image: "/media/Placeholder.jpg",
-  },
-  {
     title: "Strength Training",
     description:
       "Heavy lifting (Olympic lifts, isometric exercises, bodyweight exercises) on Monday, Tuesday, Thursday mornings",
     icon: Dumbbell,
     image: "/media/Placeholder.jpg",
+    exampleWorkout: {
+      title: "Example Strength Workout",
+      exercises: [
+        { name: "Front Raises", sets: "4", reps: "15,12,10,8", weight: "20,25,30,35" },
+        { name: "Lateral Raises", sets: "1", reps: "20", weight: "20" },
+        { name: "Leg Extensions", sets: "4", reps: "15,12,10,8", weight: "100,110,120,130" },
+        { name: "Leg Curls", sets: "1", reps: "20", weight: "100" },
+        { name: "Squats", sets: "5", reps: "20,15,12,10,8", weight: "135,185,205,225" },
+        { name: "Dumbbell Shoulder Press", sets: "5", reps: "30", weight: "50,40,30,20,10" },
+        { name: "Single Arm Pec Del", sets: "5", reps: "30", weight: "50,40,30,20,10" },
+        { name: "Dumbbell Lunges", sets: "5", reps: "30", weight: "50,40,30,20,10" },
+        { name: "Hanging Abs", sets: "3", reps: "To failure" }
+      ]
+    }
   },
   {
     title: "HIIT Workouts",
@@ -44,6 +80,24 @@ const trainingRoutine = [
       "High-intensity interval training with kettlebells, dumbbells, and cardio on Wednesday and Friday",
     icon: Zap,
     image: "/media/Placeholder.jpg",
+    exampleWorkout: {
+      title: "Example HIIT Workout",
+      rounds: "5",
+      exercises: [
+        { name: "Incline Treadmill", duration: "1 minute", incline: "30% (decreasing by 5% each round)" },
+        { name: "Kettlebell Swings", reps: "50 (decreasing by 10 each round)", weight: "50kg" },
+        { name: "Kettlebell Squats", reps: "50 (decreasing by 10 each round)", weight: "50kg" },
+        { name: "Burpees", reps: "50 (decreasing by 10 each round)" },
+        { name: "Push-ups", reps: "50 (decreasing by 10 each round)" }
+      ]
+    }
+  },
+  {
+    title: "Daily Running",
+    description:
+      "6.2 miles with dynamic stretching and 10x40 yard all-out sprints",
+    icon: Run,
+    image: "/media/SoloRun.jpg",
   },
 ];
 
@@ -77,7 +131,7 @@ export default function Training() {
                   src={routine.image}
                   alt={routine.title}
                   fill
-                  className={`object-cover ${routine.title === "Daily Stretch Routine" ? "object-[center_10%]" : ""}`}
+                  className={`object-cover ${routine.title === "Daily Stretch Routine" ? "object-[center_5%]" : routine.title === "Daily Running" ? "object-[center_25%]" : routine.title === "Daily Cycling" ? "object-[center_30%]" : ""}`}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
@@ -88,11 +142,37 @@ export default function Training() {
                     {routine.title}
                   </h3>
                 </div>
-                <p className="text-text">{routine.description}</p>
+                <p className="text-text mb-4">{routine.description}</p>
+
+                {routine.exampleWorkout && (
+                  <div className="mt-4">
+                    <h4 className="text-xl font-bold text-secondary mb-2">
+                      {routine.exampleWorkout.title}
+                    </h4>
+                    {routine.exampleWorkout.rounds && (
+                      <p className="text-text mb-2">
+                        Rounds: {routine.exampleWorkout.rounds}
+                      </p>
+                    )}
+                    <ul className="list-disc list-inside space-y-2 text-text">
+                      {routine.exampleWorkout.exercises.map((exercise, idx) => (
+                        <li key={idx}>
+                          <span className="font-semibold">{exercise.name}:</span>{" "}
+                          {'sets' in exercise && `Sets: ${exercise.sets}, `}
+                          {'reps' in exercise && `Reps: ${exercise.reps}, `}
+                          {'weight' in exercise && exercise.weight && `Weight: ${exercise.weight}kg, `}
+                          {'duration' in exercise && exercise.duration && `Duration: ${exercise.duration}, `}
+                          {'incline' in exercise && exercise.incline && `Incline: ${exercise.incline}`}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
         </div>
+
         <motion.div
           className="mt-12 bg-background p-6 rounded-lg shadow-md"
           initial={{ opacity: 0, y: 20 }}
