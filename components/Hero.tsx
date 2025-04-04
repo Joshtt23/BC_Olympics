@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
       {/* Background Image */}
-      <Image
+      {/* <Image
         src="/media/Photo Feb 04 2025, 8 29 38 PM.jpg"
         alt="Ben Covi cycling training"
         fill
@@ -14,7 +14,7 @@ export default function Hero() {
         quality={100}
         className="opacity-30 object-cover"
         priority
-      />
+      /> */}
 
       {/* Content Container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center">
