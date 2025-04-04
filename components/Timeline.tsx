@@ -16,7 +16,7 @@ const timelineEvents = [
     year: "Childhood",
     event: "Athletic Foundation & Family Influence",
     details:
-      "Inspired by father's remarkable athletic achievements, including a 28-1 high school wrestling record and recruitment to Princeton University. These early lessons in dedication and excellence laid the foundation for my own athletic journey.",
+      "Inspired by father's remarkable athletic achievements, including a 28-1 high school football record and recruitment to Princeton University. These early lessons in dedication and excellence laid the foundation for my own athletic journey.",
     image: "/media/ChildPose.jpeg",
     achievements: [
       "Developed early love for cycling",

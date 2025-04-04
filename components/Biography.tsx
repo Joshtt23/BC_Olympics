@@ -34,7 +34,7 @@ export default function Biography() {
                 transition={{ duration: 0.5, delay: 0.3 }}
               >
                 <Image
-                  src="/media/ChildSuperman.jpeg"
+                  src="/media/ChildSuperMan.jpeg"
                   alt="Early cycling days"
                   fill
                   className="object-cover"

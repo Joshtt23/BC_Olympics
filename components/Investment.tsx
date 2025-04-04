@@ -17,7 +17,7 @@ const investmentData = [
   },
   {
     title: "Training Facilities",
-    description: "4-month seasonal rental near Kingston Velodrome (Flushing, NY)",
+    description: "4-month seasonal rental near Kinesio Velodrome (Flushing, NY)",
     amount: "$6,912",
     icon: Home,
   },
