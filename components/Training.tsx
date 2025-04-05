@@ -85,8 +85,8 @@ const trainingRoutine: TrainingRoutine[] = [
       rounds: "5",
       exercises: [
         { name: "Incline Treadmill", duration: "1 minute", incline: "30% (decreasing by 5% each round)" },
-        { name: "Kettlebell Swings", reps: "50 (decreasing by 10 each round)", weight: "50kg" },
-        { name: "Kettlebell Squats", reps: "50 (decreasing by 10 each round)", weight: "50kg" },
+        { name: "Kettlebell Swings", reps: "50 (decreasing by 10 each round)", weight: "50lbs" },
+        { name: "Kettlebell Squats", reps: "50 (decreasing by 10 each round)", weight: "50lbs" },
         { name: "Burpees", reps: "50 (decreasing by 10 each round)" },
         { name: "Push-ups", reps: "50 (decreasing by 10 each round)" }
       ]

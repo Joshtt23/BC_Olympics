@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { getConsecutiveDays, getTrainingHours } from "../utils/dateCalculations";
 
 const timelineEvents = [
   {
@@ -64,9 +65,9 @@ const timelineEvents = [
     details: "Committed to rigorous daily workouts and strict diet regimen.",
     image: "/media/WaterDrink.jpg",
     achievements: [
-      "1,880 consecutive days of workouts",
-      "4,871.37 hours of training",
-      "Maintained consistent diet for 1,880 days",
+      `${getConsecutiveDays()} consecutive days of workouts`,
+      `${getTrainingHours()} hours of training`,
+      `Maintained consistent diet for ${getConsecutiveDays()} days`,
     ],
   },
   {

@@ -5,7 +5,7 @@ import { Utensils, Battery, Moon, Apple, X } from "lucide-react";
 const nutritionData = [
   {
     title: "Intermittent Fasting",
-    description: "Practiced 365 days a year since December 17th, 2019 to regulate blood sugar levels and maintain consistent energy",
+    description: `Practiced 365 days a year since December 17th, 2019 to regulate blood sugar levels and maintain consistent energy`,
     icon: Battery,
   },
   {

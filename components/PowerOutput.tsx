@@ -95,7 +95,7 @@ export default function PowerOutput() {
               30-second Avg W/kg: {powerData.percentiles["30sec"]} percentile
             </p>
             <p className="mt-4 text-sm text-text-muted">
-              These numbers are close to elite-level cycling power outputs.
+              These numbers were achieved during testing at the USA Cycling "Search for Speed" program in Los Angeles, demonstrating elite-level cycling power outputs.
             </p>
           </motion.div>
         </div>
