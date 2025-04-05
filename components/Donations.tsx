@@ -29,7 +29,7 @@ export default function Donations() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <motion.a
-            href="https://buymeacoffee.com/bcoviOlymlicCycling" // Replace with actual donation link
+            href="https://buymeacoffee.com/bcoviOlympicCycling" // Replace with actual donation link
             className="px-8 py-3 rounded-full text-lg font-semibold bg-secondary text-text-light hover:bg-opacity-90 transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
