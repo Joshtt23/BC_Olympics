@@ -47,7 +47,7 @@ export default function Investment() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Achieving Olympic-level performance requires significant investment in equipment, recovery, and training facilities. These expenses reflect the commitment to excellence and the pursuit of Olympic qualification.
+          Achieving national- and Olympic-level performance requires significant investment in equipment, recovery, and training facilities. These expenses fund the work toward U.S. nationals, UCI Olympic-qualifying races, and Brisbane 2032.
         </motion.p>
         <div className="grid md:grid-cols-2 gap-8">
           {investmentData.map((item, index) => (

@@ -74,8 +74,8 @@ export default function NutritionAndRecovery() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           Ben's nutrition plan is as rigorous and disciplined as his training
-          regimen, designed to fuel his Olympic aspirations and maintain peak
-          performance.
+          regimen, designed to fuel nationals, UCI qualifiers, and the long run
+          to 2032 while maintaining peak performance.
         </motion.p>
         <div className="grid md:grid-cols-2 gap-8">
           {nutritionData.map((item, index) => (

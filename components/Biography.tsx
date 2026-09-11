@@ -34,7 +34,7 @@ const storyBlocks: StoryBlock[] = [
   },
   {
     title: "College & competition",
-    text: "After high school, I attended Hudson Valley Community College (HVCC), where I earned an Associate of Science (A.S.) degree in Exercise Science while playing football for two full seasons. That period instilled the dedication, discipline, self-confidence, and perseverance I bring to Olympic training today.",
+    text: "After high school, I attended Hudson Valley Community College (HVCC), where I earned an Associate of Science (A.S.) degree in Exercise Science while playing football for two full seasons. That period instilled the dedication, discipline, self-confidence, and perseverance I bring to elite track sprint training today.",
     image: "/media/HVGame7.webp",
     alt: "Ben playing college football at HVCC",
     objectPosition: "center 30%",
@@ -48,7 +48,7 @@ const storyBlocks: StoryBlock[] = [
   },
   {
     title: "Every single day",
-    text: `My commitment is unwavering: ${getConsecutiveDays()} consecutive days and ${getTrainingHours()} hours of training so far, covering ${getMilesCovered()} miles of cycling and running. By the start of the 2028 Olympics, I project ${PROJECTED_VALUES.hours} hours of training, ${PROJECTED_VALUES.workouts} workouts, and a streak of ${PROJECTED_VALUES.days} consecutive days.`,
+    text: `My commitment is unwavering: ${getConsecutiveDays()} consecutive days and ${getTrainingHours()} hours of training so far, covering ${getMilesCovered()} miles of cycling and running. By the start of the 2032 Olympics, I project ${PROJECTED_VALUES.hours} hours of training, ${PROJECTED_VALUES.workouts} workouts, and a streak of ${PROJECTED_VALUES.days} consecutive days.`,
     image: "/media/SoloAction4.webp",
     alt: "Ben training hard on the bike",
     objectPosition: "center 35%",
@@ -68,15 +68,15 @@ const storyBlocks: StoryBlock[] = [
     objectPosition: "center 30%",
   },
   {
-    title: "Why 2028 matters",
-    text: "No male cyclist from the United States has qualified or medaled in Olympic track sprint since the 2000 Sydney Games. Nine years of consecutive training by 2028 puts me in position to help end that drought — for myself and for American track sprint.",
+    title: "The long road to Brisbane",
+    text: "No male cyclist from the United States has qualified or medaled in Olympic track sprint since the 2000 Sydney Games. The realistic path for me runs through U.S. nationals and UCI Olympic-qualifying races — stacking results now so I’m ready when the 2032 cycle opens the door.",
     image: "/media/PoseWBike2.webp",
     alt: "Ben with his track bike",
     objectPosition: "center 20%",
   },
   {
     title: "Results on the boards",
-    text: `That work is showing up at Valley Preferred (Trexlertown): ${winsCount()} wins and ${podiumCount()} podiums across the 2026 Saturday Masters + Rookies series — including a Men’s Novice points-race win, back-to-back wins on May 30, and consistent top finishes in scratch, elimination, flying mile, and snowball events. Next stop: keep stacking race craft all the way to 2028.`,
+    text: `That work is showing up at Valley Preferred (Trexlertown): ${winsCount()} wins and ${podiumCount()} podiums across the 2026 Saturday Masters + Rookies series — including a Men’s Novice points-race win, back-to-back wins on May 30, and consistent top finishes in scratch, elimination, flying mile, and snowball events. Next stop: keep stacking race craft toward nationals, UCI qualifiers, and 2032.`,
     image: "/media/tt/TT-33-nll-5.webp",
     alt: "Ben Covi in aero tuck on the Valley Preferred velodrome",
     objectPosition: "center 35%",
@@ -104,7 +104,8 @@ export default function Biography() {
           MY STORY
         </motion.h2>
         <p className="text-center text-text opacity-80 max-w-2xl mx-auto mb-12 sm:mb-16">
-          From Woodstock streets to the Trexlertown boards — the path to 2028.
+          From Woodstock streets to the Trexlertown boards — building toward
+          nationals, UCI qualifiers, and 2032.
         </p>
 
         <div className="space-y-16 sm:space-y-20 md:space-y-24">
@@ -155,8 +156,9 @@ export default function Biography() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          Join me on this journey. Together, we can turn a lifelong dream into
-          Olympic reality.
+          Join me on this journey. Together, we can turn daily work into
+          national starts, UCI Olympic-qualifying races, and a shot at Brisbane
+          2032.
         </motion.p>
       </div>
     </section>

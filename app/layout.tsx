@@ -35,19 +35,21 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Ben Covi | Track Sprint Cyclist · 2028 Olympic Journey",
+    default: "Ben Covi | Track Sprint Cyclist · Road to 2032",
     template: "%s | Ben Covi",
   },
   description:
-    "Follow Ben Covi’s path to the 2028 Olympics — track sprint racing at Trexlertown, elite power numbers, training, and how to support the campaign.",
+    "Follow Ben Covi’s path through nationals and UCI Olympic-qualifying races toward Brisbane 2032 — track sprint at Trexlertown, elite power numbers, training, and how to support the campaign.",
   keywords: [
     "Ben Covi",
     "track cycling",
     "Olympic cycling",
+    "UCI",
+    "nationals",
     "Trexlertown",
     "Valley Preferred",
     "match sprint",
-    "2028 Olympics",
+    "2032 Olympics",
   ],
   authors: [{ name: "Ben Covi" }],
   creator: "Ben Covi",
@@ -56,9 +58,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/",
     siteName: "Ben Covi",
-    title: "Ben Covi | Track Sprint Cyclist · 2028 Olympic Journey",
+    title: "Ben Covi | Track Sprint Cyclist · Road to 2032",
     description:
-      "Track sprint racing, T-Town results, training, and the road to 2028.",
+      "Track sprint racing, T-Town results, nationals & UCI qualifiers, and the road to Brisbane 2032.",
     images: [
       {
         url: "/media/tt/TT-33-nll-5.webp",
@@ -70,9 +72,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ben Covi | Track Sprint Cyclist · 2028 Olympic Journey",
+    title: "Ben Covi | Track Sprint Cyclist · Road to 2032",
     description:
-      "Track sprint racing, T-Town results, training, and the road to 2028.",
+      "Track sprint racing, T-Town results, nationals & UCI qualifiers, and the road to Brisbane 2032.",
     images: ["/media/tt/TT-33-nll-5.webp"],
   },
   robots: {
@@ -92,7 +94,7 @@ const jsonLd = {
   url: SITE_URL,
   jobTitle: "Track Sprint Cyclist",
   description:
-    "Aspiring Olympian training for the 2028 Olympic Games in track sprint cycling.",
+    "Track sprint cyclist racing toward U.S. nationals, UCI Olympic-qualifying events, and the 2032 Olympic Games.",
   sameAs: [
     "https://www.youtube.com/@ChasingGoldWithBen",
     "https://instagram.com/bcovi1998",

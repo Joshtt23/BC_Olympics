@@ -32,7 +32,7 @@ export default function Footer() {
           <div className="w-full md:w-1/4 mb-6 md:mb-0">
             <h3 className="text-2xl font-bold mb-2">Ben Covi's Journey</h3>
             <p style={{ color: "var(--color-text-muted)" }}>
-              Follow my path to the Olympics
+              Follow the path to nationals, UCI qualifiers, and 2032
             </p>
           </div>
           <div className="w-full md:w-2/4 mb-6 md:mb-0">
@@ -99,7 +99,7 @@ export default function Footer() {
           >
             Designed and developed by{" "}
             <motion.a
-              href="https://joshuatraver.com"
+              href="https://joshua-traver.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline"

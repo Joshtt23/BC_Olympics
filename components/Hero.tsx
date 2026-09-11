@@ -84,7 +84,8 @@ export default function Hero() {
             BEN COVI
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-10 font-sans font-light tracking-wide text-white/90">
-            Pedaling toward 2028 Olympic glory — one match sprint at a time.
+            Building toward nationals, UCI Olympic qualifiers, and Brisbane
+            2032 — one match sprint at a time.
           </p>
           <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-3 sm:gap-4">
             <a

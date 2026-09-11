@@ -64,7 +64,7 @@ const timelineEvents = [
   },
   {
     year: "2018–Present",
-    event: "Olympic training streak begins",
+    event: "Daily training streak begins",
     details:
       "Committed to rigorous daily workouts and a strict diet regimen — training every day without missing a session.",
     image: "/media/WaterDrink.webp",
@@ -98,12 +98,27 @@ const timelineEvents = [
     ],
   },
   {
-    year: "2028",
-    event: "Olympic Goal",
+    year: "Near term",
+    event: "Nationals & UCI Olympic qualifiers",
     details:
-      "Aiming to qualify for the 2028 Olympic Games and help end the U.S. drought in men's Olympic track sprint.",
+      "The next milestones are U.S. nationals and UCI Olympic-qualifying races — proving race craft against the field that feeds the next Games cycle.",
+    image: "/media/tt/TT-34-nll-50.webp",
+    achievements: [
+      "Chase national championship starts",
+      "Target UCI Olympic-qualifying race invitations",
+      "Keep stacking T-Town and domestic results",
+    ],
+  },
+  {
+    year: "2032",
+    event: "Olympic goal — Brisbane",
+    details:
+      "Building toward the 2032 Olympic Games. The U.S. men’s track sprint drought since Sydney 2000 is still the long-game motivation — this cycle is about earning the starts that put Brisbane in reach.",
     image: "/media/SittingPoseWBike.webp",
-    achievements: ["Working toward Olympic qualification"],
+    achievements: [
+      "Nationals → UCI qualifiers → Olympic selection path",
+      "Help end the U.S. drought in men’s Olympic track sprint",
+    ],
   },
 ];
 

@@ -35,10 +35,10 @@ export function getProjectedValues(targetDate: Date) {
   };
 }
 
-// Projected values remain static as per the original text
+// Projected through the start of the 2032 Olympic Games (from START_DATE)
 export const PROJECTED_VALUES = {
-  hours: "9,417",
-  workouts: "3,139",
-  days: "3,139",
-  miles: "17,433"
+  hours: "13,806",
+  workouts: "4,602",
+  days: "4,602",
+  miles: "25,541",
 }; 

@@ -115,7 +115,8 @@ export default function Training() {
         </motion.h2>
         <p className="text-center text-lg mb-12 text-text">
           Ben's rigorous 7-day-a-week training routine is designed to push the
-          limits of human performance and prepare for Olympic-level competition.
+          limits of human performance and prepare for national- and
+          Olympic-level competition.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {trainingRoutine.map((routine, index) => (

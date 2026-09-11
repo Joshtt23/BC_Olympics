@@ -39,7 +39,7 @@ export default function Donations() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Support My Olympic Journey
+          Support the Journey
         </motion.h2>
         <motion.p
           className="text-center text-lg mb-10 text-text max-w-2xl mx-auto"
@@ -47,7 +47,8 @@ export default function Donations() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          Training for Olympic track sprint costs about{" "}
+          Training for elite track sprint — nationals, UCI Olympic qualifiers,
+          and the road to 2032 — costs about{" "}
           <span className="font-semibold text-secondary">$25,000 a year</span> —
           equipment, recovery, and living near the velodromes where I race.
           Every contribution keeps me on the boards.
