@@ -83,12 +83,19 @@ export default function Investment() {
             Total Annual Investment
           </h3>
           <p className="text-text mb-4">
-            The total annual investment in training and recovery exceeds $24,948, demonstrating the level of commitment required to compete at the highest level of track cycling. This investment covers essential equipment maintenance, comprehensive recovery treatments, and strategic location-based training to access world-class velodromes.
+            About <span className="font-semibold">$24,948 per year</span> keeps
+            this campaign moving — bike maintenance, recovery care, and seasonal
+            housing next to the velodromes in Flushing and Trexlertown. Your
+            support directly funds those line items.
           </p>
-          <div className="flex justify-center">
-            <div className="text-4xl font-bold text-secondary">
-              $24,948
-            </div>
+          <div className="flex flex-col items-center gap-4">
+            <div className="text-4xl font-bold text-secondary">$24,948</div>
+            <a
+              href="#donations"
+              className="px-6 py-2 rounded-full text-sm font-semibold bg-secondary text-white hover:bg-opacity-90 transition-colors"
+            >
+              Help cover these costs
+            </a>
           </div>
         </motion.div>
       </div>

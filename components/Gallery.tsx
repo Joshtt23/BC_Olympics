@@ -21,176 +21,141 @@ const DynamicLightboxGallery = dynamic(() => import("./LightboxGallery"), {
 
 const ITEMS_PER_PAGE = 12;
 
+/** Curated set — strongest time-trial + training frames + race clips */
 const media = [
   {
+    type: "video" as const,
+    src: "/media/ClipSprint.mp4",
+    thumbnail: "/media/tt/thumbs/TT-33-nll-5.webp",
+    title: "Track sprint clip — T-Town",
+    alt: "Short track sprint clip from Trexlertown",
+  },
+  {
+    type: "video" as const,
+    src: "/media/ClipTrack.mp4",
+    thumbnail: "/media/tt/thumbs/TT-34-nll-50.webp",
+    title: "Velodrome clip — T-Town",
+    alt: "Short velodrome racing clip",
+  },
+  {
     type: "image" as const,
-    src: "/media/Portrait.jpg",
+    src: "/media/tt/TT-33-nll-5.webp",
+    thumbnail: "/media/tt/thumbs/TT-33-nll-5.webp",
+    alt: "Ben Covi in aero tuck on the Valley Preferred velodrome",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-18-nll-27.webp",
+    thumbnail: "/media/tt/thumbs/TT-18-nll-27.webp",
+    alt: "Ben Covi in Giro aero helmet under the team tent",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-34-nll-50.webp",
+    thumbnail: "/media/tt/thumbs/TT-34-nll-50.webp",
+    alt: "Held at the start line before a time trial effort",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-graphic-banner.webp",
+    thumbnail: "/media/tt/thumbs/TT-graphic-banner.webp",
+    alt: "Ben Covi and coach with Dolan track bike between sessions",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-28-nll-45.webp",
+    thumbnail: "/media/tt/thumbs/TT-28-nll-45.webp",
+    alt: "Time trial day action at Trexlertown",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-23-nll-333.webp",
+    thumbnail: "/media/tt/thumbs/TT-23-nll-333.webp",
+    alt: "High-speed banking shot at Valley Preferred",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-21-nll-32.webp",
+    thumbnail: "/media/tt/thumbs/TT-21-nll-32.webp",
+    alt: "Track racing action on time trial day",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-24-nll-3333.webp",
+    thumbnail: "/media/tt/thumbs/TT-24-nll-3333.webp",
+    alt: "Velodrome banking action, time trial day",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-19-nll-30.webp",
+    thumbnail: "/media/tt/thumbs/TT-19-nll-30.webp",
+    alt: "Time trial day track action",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-32-nll-49.webp",
+    thumbnail: "/media/tt/thumbs/TT-32-nll-49.webp",
+    alt: "Competition moment on the track",
+  },
+  {
+    type: "image" as const,
+    src: "/media/Portrait.webp",
     alt: "Professional portrait of Ben Covi",
   },
   {
     type: "image" as const,
-    src: "/media/Portrait2.jpg",
-    alt: "Another professional portrait",
+    src: "/media/Portrait2.webp",
+    alt: "Portrait of Ben Covi",
   },
   {
     type: "image" as const,
-    src: "/media/SoloCloseup.jpg",
+    src: "/media/PoseWBike2.webp",
+    alt: "Ben Covi posing with track bike",
+  },
+  {
+    type: "image" as const,
+    src: "/media/SittingPoseWBike.webp",
+    alt: "Ben Covi seated with bike",
+  },
+  {
+    type: "image" as const,
+    src: "/media/SoloCloseup.webp",
     alt: "Close-up action shot",
   },
   {
     type: "image" as const,
-    src: "/media/SoloCloseup2.jpg",
-    alt: "Detailed close-up shot",
+    src: "/media/SoloAction4.webp",
+    alt: "Training action on the bike",
   },
   {
     type: "image" as const,
-    src: "/media/SoloHeadon.jpg",
-    alt: "Head-on action shot",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAirle.jpg",
-    alt: "Aerial action shot",
-  },
-  {
-    type: "image" as const,
-    src: "/media/Sideshot.jpg",
-    alt: "Side profile action shot",
-  },
-  {
-    type: "image" as const,
-    src: "/media/PoseWBike.jpg",
-    alt: "Pose with bike",
-  },
-  {
-    type: "image" as const,
-    src: "/media/PoseWBike2.jpg",
-    alt: "Another pose with bike",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SittingPoseWBike.jpg",
-    alt: "Sitting pose with bike",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SittingPoseWBike2.jpg",
-    alt: "Another sitting pose with bike",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SittingPoseWBike3.jpg",
-    alt: "Third sitting pose with bike",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction.jpg",
-    alt: "Action shot on the track",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction2.jpg",
-    alt: "Another action shot",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction3.jpg",
-    alt: "Dynamic action shot",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction4.jpg",
-    alt: "Competition action shot",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction5.jpg",
-    alt: "Training action shot",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction6.jpg",
-    alt: "Track action shot",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction7.jpg",
-    alt: "Racing action shot",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction8.jpg",
-    alt: "Competition moment",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction9.jpg",
-    alt: "Training moment",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction10.jpg",
-    alt: "Track moment",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction11.jpg",
-    alt: "Racing moment",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction12.jpg",
-    alt: "Competition highlight",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction13.jpg",
-    alt: "Training highlight",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction14.jpg",
-    alt: "Track highlight",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction15.jpg",
-    alt: "Racing highlight",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction16.jpg",
-    alt: "Competition achievement",
-  },
-  {
-    type: "image" as const,
-    src: "/media/Race.jpg",
+    src: "/media/Race.webp",
     alt: "Race action shot",
   },
   {
     type: "image" as const,
-    src: "/media/Race2.jpg",
-    alt: "Another race moment",
+    src: "/media/GroupRide.webp",
+    alt: "Group training ride",
   },
   {
     type: "image" as const,
-    src: "/media/Race3.jpg",
-    alt: "Race highlight",
+    src: "/media/GymDay.webp",
+    alt: "Strength training gym day",
   },
   {
     type: "image" as const,
-    src: "/media/GroupRide.jpg",
-    alt: "Group riding session",
+    src: "/media/SoloRun.webp",
+    alt: "Sprint and run training",
   },
   {
     type: "image" as const,
-    src: "/media/Jumping.jpg",
-    alt: "Jumping action shot",
+    src: "/media/WaterDrink.webp",
+    alt: "Recovery and hydration between efforts",
   },
   {
     type: "image" as const,
-    src: "/media/WaterDrink.jpg",
-    alt: "Hydration break",
+    src: "/media/Jumping.webp",
+    alt: "Explosive training effort",
   },
 ];
 
@@ -198,13 +163,12 @@ export default function Gallery() {
   const [currentPage, setCurrentPage] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
   const totalPages = Math.ceil(media.length / ITEMS_PER_PAGE);
-  
+
   const paginatedMedia = media.slice(
     (currentPage - 1) * ITEMS_PER_PAGE,
     currentPage * ITEMS_PER_PAGE
   );
 
-  // Intersection Observer to load gallery only when it's in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -232,7 +196,7 @@ export default function Gallery() {
     >
       <div className="container mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold text-center mb-12"
+          className="text-4xl font-bold text-center mb-4"
           style={{ color: "var(--color-text)" }}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -240,31 +204,40 @@ export default function Gallery() {
         >
           Gallery
         </motion.h2>
+        <p
+          className="text-center mb-12 max-w-2xl mx-auto opacity-80"
+          style={{ color: "var(--color-text)" }}
+        >
+          Valley Preferred time trial day, training, and race moments.
+        </p>
         {isVisible ? (
           <>
             <DynamicLightboxGallery media={paginatedMedia} />
-            {/* Pagination Controls */}
-            <div className="flex justify-center items-center gap-4 mt-8">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-                disabled={currentPage === 1}
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              <span className="text-sm text-muted-foreground">
-                Page {currentPage} of {totalPages}
-              </span>
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-                disabled={currentPage === totalPages}
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
-            </div>
+            {totalPages > 1 && (
+              <div className="flex justify-center items-center gap-4 mt-8">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+                  disabled={currentPage === 1}
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </Button>
+                <span className="text-sm text-muted-foreground">
+                  Page {currentPage} of {totalPages}
+                </span>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() =>
+                    setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                  }
+                  disabled={currentPage === totalPages}
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </div>
+            )}
           </>
         ) : (
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

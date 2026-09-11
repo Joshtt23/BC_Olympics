@@ -24,9 +24,14 @@ export default function PowerOutput() {
   );
 
   useEffect(() => {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      setCurrentPower(powerData.current["6sec"].max);
+      return;
+    }
     const interval = setInterval(() => {
       setCurrentPower((prev) => {
-        const newPower = prev + (Math.random() * 20 - 10); // Random value between -10 and 10
+        const newPower = prev + (Math.random() * 20 - 10);
         return Math.max(
           powerData.current["6sec"].max - 100,
           Math.min(powerData.current["6sec"].max + 100, newPower)
@@ -109,7 +114,7 @@ export default function PowerOutput() {
           <h3 className="text-2xl font-bold mb-4 text-secondary">
             Live Power Output
           </h3>
-          <div className="h-8 bg-gray-200 rounded-full overflow-hidden">
+          <div className="h-8 bg-gray-200 rounded-full overflow-hidden" role="img" aria-label={`Live power output approximately ${Math.round(currentPower)} watts`}>
             <motion.div
               className="h-full bg-primary"
               initial={{ width: 0 }}
@@ -121,7 +126,7 @@ export default function PowerOutput() {
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             />
           </div>
-          <p className="text-center mt-2 text-lg font-semibold">
+          <p className="text-center mt-2 text-lg font-semibold" aria-live="off">
             {Math.round(currentPower)}W
           </p>
         </motion.div>

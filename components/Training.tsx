@@ -44,21 +44,21 @@ const trainingRoutine: TrainingRoutine[] = [
     description:
       "2-hour comprehensive stretching routine performed 3 times daily, focusing on neck, shoulders, pelvic stabilization, hips, and glutes while maintaining full-body flexibility",
     icon: Stretch,
-    image: "/media/Jumping.jpg",
+    image: "/media/SittingPoseWBike3.webp",
   },
   {
     title: "Daily Cycling",
     description:
       "20+ miles outside on upstate NY mountain roads or 1 hour indoor UCI workout",
     icon: Bike,
-    image: "/media/SoloAction4.jpg",
+    image: "/media/SoloAction4.webp",
   },
   {
     title: "Strength Training",
     description:
       "Heavy lifting (Olympic lifts, isometric exercises, bodyweight exercises) on Monday, Tuesday, Thursday mornings",
     icon: Dumbbell,
-    image: "/media/Placeholder.jpg",
+    image: "/media/GymDay.webp",
     exampleWorkout: {
       title: "Example Strength Workout",
       exercises: [
@@ -79,7 +79,7 @@ const trainingRoutine: TrainingRoutine[] = [
     description:
       "High-intensity interval training with kettlebells, dumbbells, and cardio on Wednesday and Friday",
     icon: Zap,
-    image: "/media/Placeholder.jpg",
+    image: "/media/Jumping.webp",
     exampleWorkout: {
       title: "Example HIIT Workout",
       rounds: "5",
@@ -97,7 +97,7 @@ const trainingRoutine: TrainingRoutine[] = [
     description:
       "6.2 miles with dynamic stretching and 10x40 yard all-out sprints",
     icon: Run,
-    image: "/media/SoloRun.jpg",
+    image: "/media/SoloRun.webp",
   },
 ];
 
@@ -131,7 +131,19 @@ export default function Training() {
                   src={routine.image}
                   alt={routine.title}
                   fill
-                  className={`object-cover ${routine.title === "Daily Stretch Routine" ? "object-[center_5%]" : routine.title === "Daily Running" ? "object-[center_25%]" : routine.title === "Daily Cycling" ? "object-[center_30%]" : ""}`}
+                  className={`object-cover ${
+                    routine.title === "Daily Stretch Routine"
+                      ? "object-[center_5%]"
+                      : routine.title === "Daily Running"
+                        ? "object-[center_25%]"
+                        : routine.title === "Daily Cycling"
+                          ? "object-[center_30%]"
+                          : routine.title === "Strength Training"
+                            ? "object-[center_40%]"
+                            : routine.title === "HIIT Workouts"
+                              ? "object-[center_20%]"
+                              : ""
+                  }`}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>

@@ -1,18 +1,17 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Twitter, Instagram, Facebook, Mail } from "lucide-react";
+import { Instagram, Mail, Youtube } from "lucide-react";
 
 const footerLinks = [
   { name: "Bio", href: "#bio" },
   { name: "Journey", href: "#journey" },
-  { name: "Achievements", href: "#achievements" },
+  { name: "Race Results", href: "#achievements" },
   { name: "Training", href: "#training" },
   { name: "Power", href: "#power" },
-  { name: "Performance", href: "#performance" },
   { name: "Nutrition & Recovery", href: "#nutrition-recovery" },
-  { name: "Competitions", href: "#competitions" },
-  { name: "Testimonials", href: "#testimonials" },
+  { name: "Investment", href: "#investment" },
+  { name: "Videos", href: "#videos" },
   { name: "Gallery", href: "#gallery" },
   { name: "Sponsors", href: "#sponsors" },
   { name: "Donate", href: "#donations" },
@@ -61,12 +60,17 @@ export default function Footer() {
               {[
                 { name: "Email", icon: Mail, href: "mailto:bcoviolympiccycling@gmail.com" },
                 { name: "Instagram", icon: Instagram, href: "https://instagram.com/bcovi1998" },
+                {
+                  name: "YouTube",
+                  icon: Youtube,
+                  href: "https://www.youtube.com/@ChasingGoldWithBen",
+                },
               ].map((social) => (
                 <motion.a
                   key={social.name}
                   href={social.href}
-                  target={social.name === "Instagram" ? "_blank" : undefined}
-                  rel={social.name === "Instagram" ? "noopener noreferrer" : undefined}
+                  target={social.name !== "Email" ? "_blank" : undefined}
+                  rel={social.name !== "Email" ? "noopener noreferrer" : undefined}
                   className="text-text hover:text-secondary transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}

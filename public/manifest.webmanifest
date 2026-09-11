@@ -1,0 +1,10 @@
+{
+  "name": "Ben Covi",
+  "short_name": "Ben Covi",
+  "description": "Track sprint cyclist chasing the 2028 Olympics",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ecf0f1",
+  "theme_color": "#3498db",
+  "lang": "en"
+}

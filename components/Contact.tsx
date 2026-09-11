@@ -155,7 +155,11 @@ export default function Contact() {
                   setFormState((prev) => ({ ...prev, subject: value }))
                 }
               >
-                <SelectTrigger className="w-full bg-background border-input focus:ring-2 focus:ring-secondary">
+                <SelectTrigger
+                  id="subject"
+                  className="w-full bg-background border-input focus:ring-2 focus:ring-secondary"
+                  aria-label="Subject"
+                >
                   <SelectValue placeholder="Select a subject" />
                 </SelectTrigger>
                 <SelectContent className="bg-background border-input">
