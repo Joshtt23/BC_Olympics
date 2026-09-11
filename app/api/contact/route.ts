@@ -1,9 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-// Use your own API Key from Resend (https://resend.com/)
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
   try {
     const { name, email, subject, message } = await req.json();
@@ -17,6 +14,10 @@ export async function POST(req: Request) {
         { status: 500 }
       );
     }
+
+    // Instantiate only when the key exists so `next build` can collect route data
+    // without requiring secrets at build time.
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const emailResponse = await resend.emails.send({
       from: `BC Olympic Cycling <bc.cycling@resend.dev>`,
