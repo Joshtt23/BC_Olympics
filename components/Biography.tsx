@@ -49,15 +49,15 @@ const storyBlocks: StoryBlock[] = [
   {
     title: "Every single day",
     text: `My commitment is unwavering: ${getConsecutiveDays()} consecutive days and ${getTrainingHours()} hours of training so far, covering ${getMilesCovered()} miles of cycling and running. By the start of the 2032 Olympics, I project ${PROJECTED_VALUES.hours} hours of training, ${PROJECTED_VALUES.workouts} workouts, and a streak of ${PROJECTED_VALUES.days} consecutive days.`,
-    image: "/media/SoloAction4.webp",
-    alt: "Ben training hard on the bike",
+    image: "/media/tt/TT-55-dsc_2272.webp",
+    alt: "Ben Covi training outdoors on a Cervélo road bike",
     objectPosition: "center 35%",
   },
   {
     title: "Racing for more than results",
     text: "Beyond the velodrome, I've raced charity events including the Tour de Kingston and Benedictine Bike for Cancer Care, and completed an Olympic-distance triathlon — proof that this journey is about giving back as much as going fast.",
-    image: "/media/GroupRide.webp",
-    alt: "Group charity and training ride",
+    image: "/media/tt/TT-52-dsc_2269.webp",
+    alt: "Ben Covi on a group road ride along a reservoir causeway",
     objectPosition: "center 40%",
   },
   {

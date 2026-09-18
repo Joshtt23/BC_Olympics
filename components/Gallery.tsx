@@ -21,7 +21,7 @@ const DynamicLightboxGallery = dynamic(() => import("./LightboxGallery"), {
 
 const ITEMS_PER_PAGE = 12;
 
-/** Curated set — strongest time-trial + training frames + race clips */
+/** Curated set — T-Town + new road training stills/clips */
 const media = [
   {
     type: "video" as const,
@@ -36,6 +36,67 @@ const media = [
     thumbnail: "/media/tt/thumbs/TT-34-nll-50.webp",
     title: "Velodrome clip — T-Town",
     alt: "Short velodrome racing clip",
+  },
+  {
+    type: "video" as const,
+    src: "/media/ClipRoad.mp4",
+    thumbnail: "/media/tt/thumbs/TT-49-dsc_2266.webp",
+    title: "Road training POV",
+    alt: "Vertical POV road ride clip",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-47-dsc_2261.webp",
+    thumbnail: "/media/tt/thumbs/TT-47-dsc_2261.webp",
+    alt: "Ben Covi riding toward camera in Edge Cycling kit",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-55-dsc_2272.webp",
+    thumbnail: "/media/tt/thumbs/TT-55-dsc_2272.webp",
+    alt: "Ben Covi in aero position on a Cervélo road bike",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-48-dsc_2263.webp",
+    thumbnail: "/media/tt/thumbs/TT-48-dsc_2263.webp",
+    alt: "Ben Covi standing with road bike in Edge Cycling kit",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-52-dsc_2269.webp",
+    thumbnail: "/media/tt/thumbs/TT-52-dsc_2269.webp",
+    alt: "Ben Covi on a group road ride along a reservoir causeway",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-49-dsc_2266.webp",
+    thumbnail: "/media/tt/thumbs/TT-49-dsc_2266.webp",
+    alt: "Ben Covi climbing away on a rural road ride",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-54-dsc_2271.webp",
+    thumbnail: "/media/tt/thumbs/TT-54-dsc_2271.webp",
+    alt: "Close road training action in Edge Cycling kit",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-53-dsc_2270.webp",
+    thumbnail: "/media/tt/thumbs/TT-53-dsc_2270.webp",
+    alt: "Road training effort on a sunny climb",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-50-dsc_2267.webp",
+    thumbnail: "/media/tt/thumbs/TT-50-dsc_2267.webp",
+    alt: "Ben Covi during outdoor road training",
+  },
+  {
+    type: "image" as const,
+    src: "/media/tt/TT-51-dsc_2268.webp",
+    thumbnail: "/media/tt/thumbs/TT-51-dsc_2268.webp",
+    alt: "Outdoor road training ride",
   },
   {
     type: "image" as const,
@@ -87,55 +148,13 @@ const media = [
   },
   {
     type: "image" as const,
-    src: "/media/tt/TT-19-nll-30.webp",
-    thumbnail: "/media/tt/thumbs/TT-19-nll-30.webp",
-    alt: "Time trial day track action",
-  },
-  {
-    type: "image" as const,
-    src: "/media/tt/TT-32-nll-49.webp",
-    thumbnail: "/media/tt/thumbs/TT-32-nll-49.webp",
-    alt: "Competition moment on the track",
-  },
-  {
-    type: "image" as const,
     src: "/media/Portrait.webp",
     alt: "Professional portrait of Ben Covi",
   },
   {
     type: "image" as const,
-    src: "/media/Portrait2.webp",
-    alt: "Portrait of Ben Covi",
-  },
-  {
-    type: "image" as const,
     src: "/media/PoseWBike2.webp",
     alt: "Ben Covi posing with track bike",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SittingPoseWBike.webp",
-    alt: "Ben Covi seated with bike",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloCloseup.webp",
-    alt: "Close-up action shot",
-  },
-  {
-    type: "image" as const,
-    src: "/media/SoloAction4.webp",
-    alt: "Training action on the bike",
-  },
-  {
-    type: "image" as const,
-    src: "/media/Race.webp",
-    alt: "Race action shot",
-  },
-  {
-    type: "image" as const,
-    src: "/media/GroupRide.webp",
-    alt: "Group training ride",
   },
   {
     type: "image" as const,
@@ -146,16 +165,6 @@ const media = [
     type: "image" as const,
     src: "/media/SoloRun.webp",
     alt: "Sprint and run training",
-  },
-  {
-    type: "image" as const,
-    src: "/media/WaterDrink.webp",
-    alt: "Recovery and hydration between efforts",
-  },
-  {
-    type: "image" as const,
-    src: "/media/Jumping.webp",
-    alt: "Explosive training effort",
   },
 ];
 
@@ -208,7 +217,7 @@ export default function Gallery() {
           className="text-center mb-12 max-w-2xl mx-auto opacity-80"
           style={{ color: "var(--color-text)" }}
         >
-          Valley Preferred time trial day, training, and race moments.
+          Valley Preferred time trial day, outdoor road training, and race moments.
         </p>
         {isVisible ? (
           <>
